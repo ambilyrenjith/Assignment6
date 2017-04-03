@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Build your Order</title>
+    <!-- Bootstrap core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+
+    <!-- Custom styles for this template -->
+    <link href="css/jumbotron-narrow.css" rel="stylesheet">
+    
+    <link href="css/signin.css" rel="stylesheet">
+    <script src="js/script.js"></script> 
+</head>
+<body>
+    <img src="images/pizza7.jpg" align ="middle" >   
+    <form class="form-signin"   method="get" action="index3.html" onsubmit="return buildValidateForm()">
+          <h1>Build your order</h1>
+          <label>Select your choice</label>
+          <ol type="a">
+              <li><input type="radio" name="crust" value="hand"  onclick="selectChoice(this.value);enableDisableCheeseSauceToppings()"> Hand Tossed<br> </li>
+              <li><input type="radio" name="crust" value="thin" onclick="selectChoice(this.value);enableDisableCheeseSauceToppings()"> Thin crust<br></li>
+              <li><input type="radio" name="crust" value="newyork" onclick="selectChoice(this.value);enableDisableCheeseSauceToppings()"> New york style</li>
+              <li><input type="radio" name="crust" value="gluten" onclick="selectChoice(this.value);enableDisableCheeseSauceToppings()"> Gluten Free</li>
+         </ol>
+         
+         <select id="sizeAndPrice" value="sizePrice" onchange="Calculate()"></select><br><br>
+         
+         <label>Select your cheese</label>
+         <select disabled class="cheeseopt" id="cheese" onchange="Calculate()">
+              <option value="0">--Select--</option>         
+              <option value="0">Light: no charge</option>
+              <option value="0">Normal(default): no charge</option>
+              <option value="2.99">Extra: +$2.99</option>
+              <option value="3.99">Double: +$3.99</option>
+          </select><br><br>
+          
+         <label>Select your sauce</label>
+         <select disabled class="sauceopt" id="sauce" onchange="Calculate()">
+            <option value="0">--Select--</option>         
+            <option value="0">Regular Tomato: no charge</option>
+              <option value=".99">Hearty Tomato:$.99</option>
+              <option value="1.99">BBQ sauce: +$1.99</option>
+         </select><br><br>
+          
+         <label>Select your toppings:</label><br>
+         <input type="checkbox" name="toppings" id="Pepp" disabled>Pepporoni($.99)<br>
+         <input type="checkbox" name="toppings" id="Saus" disabled>Sausage($.99)<br> 
+         <input type="checkbox" name="toppings" id="Ham" disabled>Ham($.99)<br>
+         <input type="checkbox" name="toppings" id="Bacon" disabled>Bacon($.99)<br> 
+         <input type="checkbox" name="toppings" id="Salami" disabled>Salami($.99)<br> 
+         <input type="checkbox" name="toppings" id="Pepper" disabled>Peppers($.99)<br>
+         <input type="checkbox" name="toppings" id="Olives" disabled>Olives($.99)<br> 
+         <input type="checkbox" name="toppings" id="jalap" disabled>Jalapenos($.99)<br> 
+         <input type="checkbox" name="toppings" id="mush" disabled>Mushroom($.99)<br> 
+         <input type="checkbox" name="toppings" id="pine" disabled>Pineapple($.99)<br> 
+         <input type="checkbox" name="toppings" id="onion" disabled>Onion($.99)<br><br>   
+         
+         <div id="priceBox">
+              <label>Price</label>   
+              <label id="price"></label>   
+         </div>
+         
+         <button class="btn btn-lg btn-primary btn-block" id="btn" type="submit">Finished Building Pizza</button>
+    </form>
+</body>
+</html>

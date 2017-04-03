@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="../../favicon.ico">
+   
+
+    <title>Delivery Location</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+
+    <!-- Custom styles for this template -->
+    <link href="css/jumbotron-narrow.css" rel="stylesheet">
+    
+    <link href="css/signin.css" rel="stylesheet">
+
+    <!-- Just for debugging purposes. Don't actually copy these 2 lines! -->
+
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    <script src="js/script.js"></script>
+  </head>
+
+  <body>
+
+    <div class="container">
+      <img src="images/pizza7.jpg">
+      <form class="form-signin" action="index2.html" method="get" onsubmit="return validateForm()" method="post">
+        <h1>Hot & Spicy Pizza</h1>      
+       <h2>Pizza order form</h2>
+       <!-- <h2 class="form-signin-heading">Please sign in</h2>-->
+        
+        <label>Name</label> 
+        <input type="text" id="name" placeholder="Enter your name:"  autofocus>
+        
+        <label>Address Type</label>       
+        <select class="drop_down" id="addresstype" onchange="displayOther(this)">
+              <option value="select" selected>Select your address type</option>
+              <option value="house">House</option>
+              <option value="apart">Apartment</option>
+              <option value="busi">Business</option>
+              <option value="campus">Campus</option>
+              <option value="hotel">Hotel</option>
+              <option value="dorm">Dorm</option>
+              <option value="other">Other</option>
+        </select>
+       
+        <input type="text" name="other" id="other" placeholder="Enter other address type:" style="display:none" >
+ 
+        <label>Street name</label>   
+        <input type="text" name="street" id="street" class="street" placeholder="Enter your street:" >
+        
+        <label>Apartment Number</label>        
+        <input type="text" name="aptno" id="aptno" class="aptno" placeholder="Enter your apartment number:"  autofocus>
+        
+        <label>City</label> 
+        <input type="text" name="city" id="city" class="city" placeholder="Enter your city:"  autofocus>
+        
+        <label>State</label>
+        <input type="text" name="state" id="state" class="state" placeholder="Enter your state:" autofocus>
+        
+        <label>Zip Code</label>
+        <input type="text" name="zip" id ="zip" class="zip" placeholder="Enter your zip code:"  autofocus>
+         
+        <label>Phone Number</label>
+        <input type="text" name="phone" id="phone" class="phone" placeholder="Enter your phone number:"  autofocus>
+        
+         
+        <label>Email</label>
+        <label for="inputEmail" class="sr-only">Name</label>
+        
+        <input type="text" name="inputEmail" id="inputEmail" class="form-control" placeholder="Enter your email address:" autofocus>
+        
+        <div class="checkbox">
+          <label>
+            <input type="checkbox" value="remember-me"> Remember me
+          </label>
+        </div>
+        <button class="btn btn-lg btn-primary btn-block" id="btn" type="submit">Sign in</button>
+      </form>
+
+      <footer class="footer">
+        <p>&copy; 2016 Company, Inc.</p>
+      </footer>
+
+    </div> <!-- /container -->
+
+
+     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="js/bootstrap.min.js"></script>
+  </body>
+</html>

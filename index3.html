@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Billing Information</title>
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+
+    <!-- Custom styles for this template -->
+    <link href="css/jumbotron-narrow.css" rel="stylesheet">
+    
+    <link href="css/signin.css" rel="stylesheet">
+    <script src="js/script.js"></script> 
+
+</head>
+<body>
+   <img src="images/pizza7.jpg" align ="middle" > 
+   <form class="form-signin"   onsubmit="return billValidation()" method="get">
+       <h1>Billing Information</h1>
+       <label>Name</label> 
+        <input type="text" id="billName" placeholder="Enter your name:"  autofocus>
+        
+        <label>Address Type</label>       
+        <select class="drop_down" id="addresstype" onchange="displayOther(this)">
+              <option value="select" selected>Select your address type</option>
+              <option value="house">House</option>
+              <option value="apart">Apartment</option>
+              <option value="busi">Business</option>
+              <option value="campus">Campus</option>
+              <option value="hotel">Hotel</option>
+              <option value="dorm">Dorm</option>
+              <option value="other">Other</option>
+        </select>
+       
+        <input type="text" name="other" id="billOther" placeholder="Enter other address type:" style="display:none" >
+ 
+        <label>Street name</label>   
+        <input type="text" name="street" id="billStreet" class="street" placeholder="Enter your street:" >
+        
+        <label>Apartment Number</label>        
+        <input type="text" name="aptno" id="billAptno" class="aptno" placeholder="Enter your apartment number:"  autofocus>
+        
+        <label>City</label> 
+        <input type="text" name="city" id="billCity" class="city" placeholder="Enter your city:"  autofocus>
+        
+        <label>State</label>
+        <input type="text" name="state" id="billState" class="state" placeholder="Enter your state:" autofocus>
+        
+        <label>Zip Code</label>
+        <input type="text" name="zip" id ="billZip" class="zip" placeholder="Enter your zip code:"  autofocus>
+         
+        <label>Phone Number</label>
+        <input type="text" name="phone" id="billPhone" class="phone" placeholder="Enter your phone number:"  autofocus>
+        
+         
+        <label>Email</label>
+        <input type="text" name="inputEmail" id="billInputEmail" class="form-control" placeholder="Enter your email address:" autofocus>
+        
+        <div class="checkbox">
+          <label>
+            <input type="checkbox" value="remember-me"> Same as delivery information
+          </label>
+        </div>
+        
+        <label>Card Number</label>
+        <input type="text" name="card" id="billCardNumber" class="form-control" placeholder="Enter your card number:" autofocus>
+        
+        <label>Expiration date</label>
+        <div class="dateMonth"> 
+              <select id="monthStart" name="monthStart">
+                <option>--Select--</option> 
+                <option value="1">January</option>       
+                <option value="2">February</option>       
+                <option value="3">March</option>       
+                <option value="4">April</option>       
+                <option value="5">May</option>       
+                <option value="6">June</option>       
+                <option value="7">July</option>       
+                <option value="8">August</option>       
+                <option value="9" >September</option>       
+                <option value="10">October</option>       
+                <option value="11">November</option>       
+                <option value="12">December</option> 
+             </select>
+        </div>
+        
+        <div class="dateMonth">
+            <select id="yearStart" name="yearStart" > 
+                <option>--Select--</option>   
+                <option>2017</option>       
+                <option>2018</option>       
+                <option>2019</option>       
+                <option>2020</option>       
+             </select><br>
+        </div>              
+         
+        
+        <button class="btn btn-lg btn-primary btn-block" id="btn" type="submit">Submit </button>
+    </form>   
+    
+        
+</body>
+</html>
